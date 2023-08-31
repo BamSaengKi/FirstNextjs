@@ -6,7 +6,14 @@ export default function NavBar() {
 
   return (
     <nav>
-      <img src="/vercel.svg" />
+      <div className="nav_icon">
+        <a href="/">
+          <img src="/vercel.svg" />
+        </a>
+        <a>
+          <img src="churup.png" />
+        </a>
+      </div>
       <div>
         <Link href="/">
           <a className={router.pathname === "/" ? "active" : ""}>Home</a>
@@ -41,6 +48,11 @@ export default function NavBar() {
         nav div {
           display: flex;
           gap: 10px;
+        }
+        .nav_icon {
+          display: flex;
+          flex-direction : row;
+          align-items : center ;          
         }
       `}</style>
     </nav>
